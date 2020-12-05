@@ -1,8 +1,3 @@
-"""
-Event type string used in VN Trader.
-"""
-
-from vnpy.event import EVENT_TIMER  # noqa
 
 EVENT_TICK = "eTick."
 EVENT_TRADE = "eTrade."
@@ -18,7 +13,6 @@ from typing import Any, Callable
 
 EVENT_TIMER = "eTimer"
 
-
 class Event:
 
     def __init__(self, type: str, data: Any = None):
@@ -28,9 +22,7 @@ class Event:
 
 HandlerType = Callable[[Event], None]
 
-
 class EventEngine:
-
 
     def __init__(self, interval: int = 1):
 
